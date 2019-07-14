@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Table with generator and sort</title>
+      <meta charset="utf-8" />      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <style> 
+         td {
+            border: solid 1px grey;
+            padding-left: 1%;
+         }
+         table, thead, tfoot {
+            border: solid 1px grey;
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 0 5px rgba(12, 246, 254, 0.7);          
+         }         
+         table {
+            border: double 5px grey;      
+         }
+         tr:nth-child(even) {background: rgb(239, 238, 238)}
+         thead, tfoot {
+            font-weight: bold;
+            background: rgb(203, 254, 216);
+         }
+         button {font-weight: bold}
+         h2 {
+            color: blue;
+            text-align: center;
+         }                         
+       
+      </style>
+   </head>
+   <body>
+      <div><h2>Table whith generator and sort by key.</h2></div>
+      <table>
+         <thead>
+            <tr>
+               <td>Task counter:</td>
+               <td><button type="button" id="nameId">Task name:</button></td>
+               <td><button type="button" id="stateId">Status:</button></td>
+               <td><button type="button" id="answerId">Answers:</button></td>
+               <td>Delete</td>
+            </tr>           
+         </thead>
+         <tfoot>
+            <tr>
+               <td>New task:</td>
+               <form id="newTask">
+                  <td><input type="text" id="name" value="New task name"/></td>
+                  <td><input type="text" id="state" value="New status"/></td>
+                  <td><input type="text" id="answer" value="New answers"/></td>
+                  <td><button id="add" type="button" name="add"/>Add</button></td>
+               </form>   
+            </tr>
+         </tfoot>
+         <tbody id="mainContent">
+            <tr>                            
+            </tr>            
+         <tbody>            
+      </table>
+      </br>
+      <div>
+         <button type="button" id="generate10Strings">Generate 10 tasks!!!</button>
+      </div>   
+      
+      <script src="Table with generator and sort.js"></script>      
+      
+   </body>
+</html>
